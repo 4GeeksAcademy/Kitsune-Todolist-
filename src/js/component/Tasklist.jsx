@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
+ 
 
 const Tasklist = () => {
   const [task, setTask] = useState ("")
   const [todos, setTodos] = useState ([])
-
-
 
   return (
     <>
@@ -38,7 +37,10 @@ const Tasklist = () => {
          ))}
 
       </ul>
-      <div>{todos.length} taks</div>
+
+      <div className="footer" > 
+          {todos.length === 0 ? (<p>No hay tareas en la lista, añada una tarea</p>) : (`${todos.length} task`)} 
+      </div>
     </>
   );
 };
