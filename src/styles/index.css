@@ -10,3 +10,43 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    margin-top: 15px;
+    width: 100vh;
+}
+
+
+.ToDoApp{
+    width: 100vh;
+    position: absolute;
+    left: 25%;
+}
+
+
+h1{
+    text-align: center;
+}
+ul{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+ul li {
+    border: 1px solid grey;
+    list-style: none;
+    padding: 5px;
+}
+
+input {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.icon{
+   margin-top: 3px;
+   color:brown;
+}
+
+.tasklist{
+    display: flex;
+    justify-content: space-between;
+}
