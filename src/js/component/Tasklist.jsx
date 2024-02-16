@@ -24,22 +24,22 @@ const Tasklist = () => {
             </input>
         </li>
 
-        {todos.map((value, index) => ( //mapeo el array llamado todos.
+        {todos.map((index, value) => ( //mapeo el array llamado todos.
            <li className="tasklist">
-             {value} 
+             {index} 
              <span 
                   onClick={() => 
                       setTodos(
                         todos.filter(
-                          (value ,newArray) =>
-                             index != newArray))} className="tasklist"><RiDeleteBinLine className="icon"/></span>
+                          (q ,newArray) =>
+                             value != newArray))} className="tasklist"><RiDeleteBinLine className="icon"/></span>
            </li>
          ))}
 
       </ul>
-
+      <hr/>
       <div className="footer" > 
-          {todos.length === 0 ? (<p>No hay tareas en la lista, añada una tarea</p>) : (`${todos.length} task`)} 
+          {todos.length === 0 ? (<p>No hay tareas en la lista, añada una tarea</p>) : (todos.length === 1 ? `${todos.length} task` : `${todos.length} tasks`)} 
       </div>
     </>
   );
